@@ -20,10 +20,10 @@ while IFS=',' read -r bitmap palette; do
     echo "Processing bitmap $bitmap with palette $palette"
 
     # Extract the bitmap and palette resources
-    python3 ../resource_tool/resource_tool.py extract-resource "$RESOURCES_FILE" "$bitmap" "res/$bitmap.bin"
-    python3 ../resource_tool/resource_tool.py extract-resource "$RESOURCES_FILE" "$palette" "res/$palette.bin"
+    if [[ ! -f "res/$bitmap.bin" ]]; then ../resource_tool extract-resource "$RESOURCES_FILE" "$bitmap" "res/$bitmap.bin"; fi
+    if [[ ! -f "res/$palette.bin" ]]; then ../resource_tool extract-resource "$RESOURCES_FILE" "$palette" "res/$palette.bin"; fi
 
     # Decode the image
-    python3 ../resource_tool/resource_tool.py decode-image -i true -c true "res/$bitmap.bin" "res/$palette.bin" "$bitmap.png"
+    if [[ ! -f "res/$bitmap.png" ]]; then ../resource_tool decode-image -i true -c true "res/$bitmap.bin" "res/$palette.bin" "res/$bitmap.png"; fi
 
 done < "$INPUT_FILE"
