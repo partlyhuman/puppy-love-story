@@ -1,0 +1,17 @@
+{
+  "name": "puppy-trainer",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "rm -r dist/ && parcel build src/index.html"
+  },
+  "dependencies": {
+    "encoding-japanese": "^2.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
