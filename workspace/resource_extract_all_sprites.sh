@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Check if the input file and resources file are provided
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 resources_file input_file"
