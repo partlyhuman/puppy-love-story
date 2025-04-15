@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="src/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
+    <title>Puppy Love Story | わんわん愛情物語</title>
+</head>
+<body>
+
+<main>
+
+    <img id="title" src="src/pls_title_ver.svg" alt="Puppy Love Story"/>
+    <p>Puppy Love Story, or わんわん愛情物語 (Wanwan Aijou Monogatari), is a visual novel released in 1995 as a launch
+        title for the Casio Loopy. The script was written by Kenji Terada, well known for his storied career including
+        foundational work on the Final Fantasy series. It's aimed at a younger audience, centred around growing up
+        without losing touch with your childhood.
+    <p>The game starts in a somewhat misleading way, so without spoiling anything I can only advise you to stick with it
+        for a few minutes. Total play time is only about 2 hours, and there are some simple puzzles and minigames. Kids
+        aged 9-12 may resonate the most with the themes explored in the game, but it can be enjoyed by all ages. As far
+        as content, there's light fantasy violence, and some (kinda surprising) violence towards animals.
+
+    <p>Of course, Loopy games are all about the stickers (or "seals"). But Puppy Love Story, as opposed to other launch
+        titles which are essentially sticker makers, uses seals as a reward for completing the whole story. If you're
+        itching to try it out, you can use the secret debug menu by holding LT+RT+B+Right during boot, or try my <a href="https://wan.loopy.land/en">Puppy
+        Trainer</a> that will generate completed save files!
+
+    <p>I've really enjoyed working on this, and had a lot of fun with the wonderful script. I believe this is the first
+        Loopy game translated to English, and I hope not the last! (If you feel strongly about which one you'd like to
+        play next, feel free to get in touch…) This year, 2025, marks the 30th anniversary of the Casio Loopy, and we
+        want everyone to be able to experience this unique console!
+
+    <p>As a bonus downloadable, to thank you for playing, I've included the manual and an English translated version.
+
+    <p>—Roger (<a href="https://bsky.app/profile/partlyhuman.com">@partlyhuman</a>)
+
+    <h2>Patching</h2>
+    <p>The patch should be applied to <tt>Wanwan Aijou Monogatari.bin</tt>, a big-endian dump of the commercial cartridge:
+
+    <pre>
+CRC32    10c5f568
+MD5      fb86fc827b7fcd1fc457294523465377
+SHA-1    4a306e64f5e4743d943efb41c6deb2af4dd85974
+SHA-256  3ccdfd7db00110d6d13b23ca9eb2e8e448559055df2fa5356a80a5b1c00fcd72</pre>
+
+    <h2>Running</h2>
+    <p>This was the only cartridge released for Loopy with expansion audio: samples are used for dog noises and other
+        sound effects. The best way to get the full experience with expansion audio is using the <a href="https://github.com/partlyhuman/LoopyMSE" target="_blank">Loopy My Seal Emulator</a>.
+        If you include the "pcm" folder full of numbered WAV files next to the ROM, MSE 0.4.0 or greater should
+        recognize and use it. You can also flash the game to your <a href="http://shop.loopy.land/" target="_blank">Floopy Drive</a> and play on a Loopy console. The
+        expansion audio will not be heard, but the game is perfectly playable without it. You'll still get music and
+        basic sound effects.
+
+    <h2>Credits</h2>
+    <p>
+        Romhacking — <a href="https://kasami.net">Kasami</a><br>
+        Translation — <a href="https://partlyhuman.com">Partlyhuman</a><br>
+        Special Thanks — <a href="https://www.youtube.com/@VideoDojoPro">VideoDojo</a>
+
+</main>
+
+<img id="baku" src="src/baku.webp" alt="Doggie" width="256" height="256"/>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
