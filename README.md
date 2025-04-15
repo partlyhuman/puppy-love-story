@@ -1,8 +1,8 @@
 # Puppy Love Story
 
-Puppy Love Story, or わんわん愛情物語 (Wanwan Aijou Monogatari), is a visual novel released in 1995 as a launch title for the Casio Loopy. The script was written by Kenji Terada, well known for his work on the Final Fantasy series. It's aimed at a younger audience, centred around growing up without losing touch with your childhood.
+Puppy Love Story, or わんわん愛情物語 (Wanwan Aijou Monogatari), is a visual novel released in 1995 as a launch title for the Casio Loopy. The script was written by Kenji Terada, well known for his storied career including foundational work on the Final Fantasy series. It's aimed at a younger audience, centred around growing up without losing touch with your childhood.
 
-The game starts in a somewhat misleading way, so without spoiling anything I can only advise you to stick with it for a few minutes. Total play time is only 2-3 hours, and there are some extremely simple puzzles and minigames. Kids aged 9-12 may resonate the most with the themes explored in the game, but it can be enjoyed by all ages. As far as content, there's light fantasy violence, some implied violence towards animals, and one "hell."
+The game starts in a somewhat misleading way, so without spoiling anything I can only advise you to stick with it for a few minutes. Total play time is only 2-3 hours, and there are some extremely simple puzzles and minigames. Kids aged 9-12 may resonate the most with the themes explored in the game, but it can be enjoyed by all ages. As far as content, there's light fantasy violence, and some (kinda surprising) violence towards animals.
 
 Of course, Loopy games are all about the stickers (or "seals"). But Puppy Love Story, as opposed to most of the launch titles which are essentially sticker makers, uses seals as a reward for completing the whole story. If you're itching to try it out, you can try the secret debug menu by holding LT+RT+B+Right during boot, or try my [Puppy Trainer](https://wan.loopy.land/en) that will generate completed save files!
 
