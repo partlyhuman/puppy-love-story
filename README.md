@@ -1,5 +1,7 @@
 # Puppy Love Story
 
+<img src="https://media.githubusercontent.com/media/partlyhuman/puppy-love-story/main/homepage/src/shot01.png" width="256"> <img src="https://media.githubusercontent.com/media/partlyhuman/puppy-love-story/main/homepage/src/shot02.png" width="256"> <img src="https://media.githubusercontent.com/media/partlyhuman/puppy-love-story/main/homepage/src/shot04.png" width="256">
+
 Puppy Love Story, or わんわん愛情物語 (Wanwan Aijou Monogatari), is a visual novel released in 1995 as a launch title for the Casio Loopy. The script was written by Kenji Terada, well known for his storied career including foundational work on the Final Fantasy series. It's aimed at a younger audience, centred around growing up without losing touch with your childhood.
 
 ## Getting it!
