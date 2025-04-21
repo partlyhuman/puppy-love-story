@@ -2,15 +2,11 @@
 
 Puppy Love Story, or わんわん愛情物語 (Wanwan Aijou Monogatari), is a visual novel released in 1995 as a launch title for the Casio Loopy. The script was written by Kenji Terada, well known for his storied career including foundational work on the Final Fantasy series. It's aimed at a younger audience, centred around growing up without losing touch with your childhood.
 
-The game starts in a somewhat misleading way, so without spoiling anything I can only advise you to stick with it for a few minutes. Total play time is only about 2 hours, and there are some simple puzzles and minigames. Kids aged 9-12 may resonate the most with the themes explored in the game, but it can be enjoyed by all ages. As far as content, there's light fantasy violence, and some (kinda surprising) violence towards animals.
+## Getting it!
 
-Of course, Loopy games are all about the stickers (or "seals"). But Puppy Love Story, as opposed to other launch titles which are essentially sticker makers, uses seals as a reward for completing the whole story. If you're itching to try it out, you can use the secret debug menu by holding LT+RT+B+Right during boot, or try my [Puppy Trainer](https://wan.loopy.land/en) that will generate completed save files!
-
-I've really enjoyed working on this, and had a lot of fun with the wonderful script. I believe this is the first Loopy game translated to English, and I hope not the last! (If you feel strongly about which one you'd like to play next, feel free to get in touch…) This year, 2025, marks the 30th anniversary of the Casio Loopy, and we want everyone to be able to experience this unique console!
-
-As a bonus downloadable, to thank you for playing, I've included the manual and an English translated version.
-
-—Roger (@partlyhuman)
+* Official releases on [GitHub](https://github.com/partlyhuman/puppy-love-story/releases/), BPS patch
+* See the [Romhacking DB entry](https://romhack.ing/database/content/entry/79qRrLCvRwC0K4tySOyC3A), BPS patch
+* Pre-patched versions available if you search archive.org
 
 ## Patching
 
