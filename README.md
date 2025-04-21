@@ -23,7 +23,9 @@ The patch should be applied to `Wanwan Aijou Monogatari.bin`, a big-endian dump 
 
 ## Running
 
-This was the only cartridge released for Loopy with expansion audio: samples are used for dog noises and other sound effects. The best way to get the full experience with expansion audio is using the [Loopy My Seal Emulator](https://github.com/partlyhuman/LoopyMSE). If you include the "pcm" folder full of numbered WAV files next to the ROM, MSE 0.4.0 or greater should recognize and use it. You can also flash the game to your [Floopy Drive](https://github.com/partlyhuman/floopydrive) and play on a Loopy console. The expansion audio will not be heard, but the game is perfectly playable without it. You'll still get music and basic sound effects.
+This was the only cartridge released for Loopy with expansion audio: samples are used for dog noises and other sound effects. The best way to get the full experience with expansion audio is using the [Loopy My Seal Emulator](https://github.com/partlyhuman/LoopyMSE/releases/). If you include the "pcm" folder full of numbered WAV files next to the ROM, MSE 0.4.0 or greater should recognize and use it.
+
+You can also flash the game to your [Floopy Drive](https://github.com/partlyhuman/floopydrive) and play on a Loopy console. The expansion audio will not be heard, but the game is perfectly playable without it. You'll still get music and basic sound effects.
 
 ## Credits:
 
