@@ -1,4 +1,4 @@
-# Puppy Love Story
+# 💞 Puppy Love Story (T-En) for Casio Loopy
 
 <img src="https://media.githubusercontent.com/media/partlyhuman/puppy-love-story/main/homepage/src/shot01.png" width="256"> <img src="https://media.githubusercontent.com/media/partlyhuman/puppy-love-story/main/homepage/src/shot02.png" width="256"> <img src="https://media.githubusercontent.com/media/partlyhuman/puppy-love-story/main/homepage/src/shot04.png" width="256">
 
@@ -30,3 +30,5 @@ You can also flash the game to your [Floopy Drive](https://github.com/partlyhuma
 * Romhacking — [Kasami](https://kasami.net)
 * Translation — [Partlyhuman](https://partlyhuman.com)
 * Special Thanks — [VideoDojo](https://www.youtube.com/@VideoDojoPro)
+
+<img src="https://media.githubusercontent.com/media/partlyhuman/puppy-love-story/main/homepage/src/baku.webp" width="128">
