@@ -25,7 +25,17 @@ This was the only cartridge released for Loopy with expansion audio: samples are
 
 You can also flash the game to your [Floopy Drive](https://github.com/partlyhuman/floopydrive) and play on a Loopy console. The expansion audio will not be heard, but the game is perfectly playable without it. You'll still get music and basic sound effects.
 
-## Credits:
+## Content Notes & Bonuses!
+
+The game starts in a somewhat misleading way, so without spoiling anything I can only advise you to stick with it for a few minutes. Total play time is only about 2 hours, and there are some simple puzzles and minigames. Kids aged 9-12 may resonate the most with the themes explored in the game, but it can be enjoyed by all ages. As far as content, there's light fantasy violence, and some (kinda surprising) violence towards animals.
+
+Of course, Loopy games are all about the stickers (or "seals"). But Puppy Love Story, as opposed to other launch titles which are essentially sticker makers, uses seals as a reward for completing the whole story. If you're itching to try it out, you can use the secret debug menu by holding LT+RT+B+Right during boot, or try my [Puppy Trainer](https://wan.loopy.land/en/) that will generate completed save files!
+
+I've really enjoyed working on this, and had a lot of fun with the wonderful script. I believe this is the first Loopy game translated to English, and I hope not the last! (If you feel strongly about which one you'd like to play next, feel free to get in touch…) This year, 2025, marks the 30th anniversary of the Casio Loopy, and we want everyone to be able to experience this unique console!
+
+As a bonus downloadable, to thank you for playing, I've included an [English translated version of the print manual](manual/).
+
+## Credits
 
 * Romhacking — [Kasami](https://kasami.net)
 * Translation — [Partlyhuman](https://partlyhuman.com)
