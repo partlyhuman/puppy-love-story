@@ -41,6 +41,16 @@ h1 {
 h2 {
     color: hotpink;
     text-shadow: 2px 2px 1px rgba(0,0,0,30%);
+    transition: all 0.2s linear;
+}
+
+.save.empty h2 {
+    color: #666;
+    text-shadow: none;
+}
+
+a, a:visited, a:hover {
+    color: deepskyblue;
 }
 
 p.description {

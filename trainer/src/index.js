@@ -24,8 +24,9 @@ const SINGLE_SAVE_BYTES = 64;
 const SAVE_HEADER_BYTES = 48;
 const STATE_BYTES = 30;
 const NAME_BYTES = 9;
-const SAVE_MARKER_U8 = new Uint8Array(Encoding.stringToCode('[WAN WAN STORY!]'));
-    // new Uint8Array([0x5B, 0x57, 0x41, 0x4E, 0x20, 0x57, 0x41, 0x4E, 0x20, 0x53, 0x54, 0x4F, 0x52, 0x59, 0x21, 0x5D]);
+// const SAVE_MARKER = '[WAN WAN STORY!]'; // Original game
+const SAVE_MARKER = '[WAN WAN SAV EN]'; // English patch
+const SAVE_MARKER_U8 = new Uint8Array(Encoding.stringToCode(SAVE_MARKER));
 const CHAPTER_GAME_CLEAR = 12;
 
 const $ = document.querySelector.bind(document);
@@ -45,17 +46,22 @@ function getNameBytes(saveNum, nameClass) {
     const nameU8 = new Uint8Array(NAME_BYTES);
     const $name = $(`.save${saveNum} input.${nameClass}`);
     let name = $name.value;
+    let nameEncoded;
 
-    if (Encoding.detect(name) === 'ASCII') {
-        name = Encoding.toZenkakuCase(name);
-        $name.value = name;
+    if (name.length <= 0) {
+        return null;
     }
 
-    const nameSJIS = Encoding.convert(name, {from: 'UNICODE', to: 'SJIS', type: 'arraybuffer'});
-    nameU8.set(nameSJIS, 0);
+    if (Encoding.detect(name) === 'ASCII') {
+        nameEncoded = Encoding.convert(name, {from: 'ASCII', to: 'ASCII', type: 'arraybuffer'});
+    } else {
+        nameEncoded = Encoding.convert(name, {from: 'UNICODE', to: 'SJIS', type: 'arraybuffer'});
+    }
+    nameU8.set(nameEncoded, 0);
     // Null-terminate
-    console.assert(nameSJIS.length < NAME_BYTES, 'Name is too long, should be 8 bytes or less');
-    nameU8[nameSJIS.length] = 0;
+    console.assert(nameEncoded.length < NAME_BYTES, 'Name is too long, should be 8 bytes or less');
+    nameU8[nameEncoded.length] = 0;
+    console.log(`Converted ${name} to`, nameU8);
     return nameU8;
 }
 
@@ -68,7 +74,7 @@ function sumBytes(bufferU8, start, end) {
     return sum;
 }
 
-function saveBufferToFile(buffer, filename = 'wanwan.sav') {
+function saveBufferToFile(buffer, filename = 'wanwan_en.sav') {
     const a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob([buffer], {type: 'application/octet-stream'}));
     a.download = filename;
@@ -90,27 +96,46 @@ $('#go').addEventListener('click', (e) => {
     for (let saveNum = 0; saveNum < 3; saveNum++) {
         const pos = SAVE_HEADER_BYTES + saveNum * SINGLE_SAVE_BYTES;
 
-        // header
-        saveBufferU8.set(SAVE_MARKER_U8, pos);
+        const playerNameBytes = getNameBytes(saveNum, 'you');
+        const dogNameBytes = getNameBytes(saveNum, 'dog');
+        if (playerNameBytes && dogNameBytes) {
+            // header
+            saveBufferU8.set(SAVE_MARKER_U8, pos);
 
-        // human name
-        saveBufferU8.set(getNameBytes(saveNum, 'you'), pos + M);
+            // human name
+            saveBufferU8.set(playerNameBytes, pos + M);
 
-        // dog name
-        saveBufferU8.set(getNameBytes(saveNum, 'dog'), pos + M + N);
+            // dog name
+            saveBufferU8.set(dogNameBytes, pos + M + N);
 
-        // clear game
-        saveBufferU8.set(generateGameState(CHAPTER_GAME_CLEAR), pos + M + N + N);
+            // clear game
+            saveBufferU8.set(generateGameState(CHAPTER_GAME_CLEAR), pos + M + N + N);
 
-        // checksum
-        const sum = sumBytes(saveBufferU8, pos, pos + SINGLE_SAVE_BYTES - 2);
-        console.assert(sum <= 0xffff && sum >= 0, 'Expected sum to be two bytes');
-        saveBufferU8[pos + SINGLE_SAVE_BYTES - 2] = (sum >> 8) & 0xff;
-        saveBufferU8[pos + SINGLE_SAVE_BYTES - 1] = sum & 0xff;
+            // checksum
+            const sum = sumBytes(saveBufferU8, pos, pos + SINGLE_SAVE_BYTES - 2);
+            console.assert(sum <= 0xffff && sum >= 0, 'Expected sum to be two bytes');
+            saveBufferU8[pos + SINGLE_SAVE_BYTES - 2] = (sum >> 8) & 0xff;
+            saveBufferU8[pos + SINGLE_SAVE_BYTES - 1] = sum & 0xff;
+        }
     }
 
     saveBufferToFile(saveBuffer);
     return false;
 });
 
-
+document.querySelectorAll(".save").forEach(($div) => {
+    const $you = $div.querySelector(".you");
+    const $dog = $div.querySelector(".dog");
+    const onChange = () => {
+        const enabled = $you.value && $dog.value;
+        if (enabled) {
+            $div.classList.remove("empty");
+        } else {
+            $div.classList.add("empty");
+        }
+    }
+    $div.querySelectorAll("input").forEach(($input) => {
+        $input.addEventListener("input", onChange);
+    });
+    onChange();
+});

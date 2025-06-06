@@ -8,25 +8,27 @@
 </head>
 <body>
 
-<h1>Puppy Trainer</h1>
-<p class="description">A save trainer for Wanwan Aijou Monogatari. Gives you cleared saves with names of your choosing, 4 characters max.</p>
+<h1>Puppy Trainer [T-en]</h1>
+<p class="description">A save trainer for <a href="https://loopy.land/puppylovestory" target="_blank">Wanwan Aijou Monogatari [T-en]</a>.
+    Creates save files with cleared games, which allow you to print seals, and play from any chapter you like.
+    Enter any of the three slots, using names of up to 8 characters, no special characters.</p>
 
 <form action="#">
 
-    <div class="save save0">
+    <div class="save save0 empty">
         <h2>Save Slot 1</h2>
-        <label><input class="you" type="text" maxlength="4" value="もも"> Your name</label>
-        <label><input class="dog" type="text" maxlength="4" value="バク"> Dog's name</label>
+        <label><input class="you" type="text" maxlength="8" placeholder="Player Name" value="Momo"> </label>
+        <label><input class="dog" type="text" maxlength="8" placeholder="Dog's Name" value="Barkley"> </label>
     </div>
-    <div class="save save1">
+    <div class="save save1 empty">
         <h2>Save Slot 2</h2>
-        <label><input class="you" type="text" maxlength="4" value="もも"> Your name</label>
-        <label><input class="dog" type="text" maxlength="4" value="バク"> Dog's name</label>
+        <label><input class="you" type="text" maxlength="8" placeholder="Player Name"> </label>
+        <label><input class="dog" type="text" maxlength="8" placeholder="Dog's Name"> </label>
     </div>
-    <div class="save save2">
+    <div class="save save2 empty">
         <h2>Save Slot 3</h2>
-        <label><input class="you" type="text" maxlength="4" value="もも"> Your name</label>
-        <label><input class="dog" type="text" maxlength="4" value="バク"> Dog's name</label>
+        <label><input class="you" type="text" maxlength="8" placeholder="Player Name"> </label>
+        <label><input class="dog" type="text" maxlength="8" placeholder="Dog's Name"> </label>
     </div>
 
     <input id="go" type="submit" value="Generate SAV">
